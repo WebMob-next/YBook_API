@@ -81,5 +81,5 @@ tools/**/dist
 /docs-references/tutorials
 /docs-references/package.json
 
-.env
-prisma/migration
+.env.*.local
+prisma/migrations
