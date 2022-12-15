@@ -11,7 +11,7 @@ export default class AcceptMimesMiddleware implements MiddlewareMethods {
     // Verifier that expects valid access tokens:
     const verifier = CognitoJwtVerifier.create({
         userPoolId: process.env.USER_POOL_ID ?? "",
-        tokenUse: "access",
+        tokenUse: "id",
         clientId: process.env.CLIENT_ID ?? "",
     });
   
