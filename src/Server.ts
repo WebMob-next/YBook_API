@@ -12,6 +12,7 @@ import "@tsed/swagger";
 import {config} from "./config";
 import * as rest from "./controllers/rest";
 import * as pages from "./controllers/pages";
+import { rateLimiterUsingThirdParty } from "./middlewares/ratelimiter";
 
 @Configuration({
   ...config,
@@ -36,6 +37,7 @@ import * as pages from "./controllers/pages";
   middlewares: [
     cors(),
     cookieParser(),
+    rateLimiterUsingThirdParty(),
     compress({}),
     methodOverride(),
     bodyParser.json(),
